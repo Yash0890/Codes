@@ -3,7 +3,22 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-D:\ESD\ADC\adc.uvproj
-Project File Date:  11/01/2022
+D:\Codes\Codes\Microcontroller\LPC2148\ADC\adc.uvproj
+Project File Date:  11/10/2022
 
 <h2>Output:</h2>
+compiling adc.c...
+adc.c(16): warning:  #61-D: integer operation result is out of range
+adc.c(16): warning:  #68-D: integer conversion resulted in a change of sign
+adc.c(87): warning:  #1-D: last line of file ends without a newline
+adc.c - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling adc.c...
+adc.c(16): warning:  #61-D: integer operation result is out of range
+adc.c(16): warning:  #68-D: integer conversion resulted in a change of sign
+adc.c(87): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=1832 RO-data=32 RW-data=4 ZI-data=1260  
+FromELF: creating hex file...
+"adc.axf" - 0 Error(s), 3 Warning(s).

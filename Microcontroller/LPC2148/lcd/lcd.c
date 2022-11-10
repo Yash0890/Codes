@@ -1,9 +1,9 @@
 #include <lpc21xx.h>
 
-#define LCD_PINS (0xff<<8)
-#define LCD_RS (1<<16)
-#define LCD_RW (1<<17)
-#define LCD_EN (1<<18)
+#define LCD_PINS (0xff<<16)
+#define LCD_RS (1<<13)
+#define LCD_RW (1<<14)
+#define LCD_EN (1<<15)
 
 void delay (unsigned int delay)
 {
@@ -24,15 +24,17 @@ void lcd_init(void)
 	delay(5);
 	lcd_cmd(0x38); // 2 lines 
 	lcd_cmd(0x0e); // display on cursor blinking
+	
 	lcd_cmd(0x01); // clear display
 	lcd_cmd(0x06); // shift to right
+	
 	lcd_cmd(0x80); // force cursor to start form beginning of 1st line
 }	
 
 void lcd_cmd(unsigned char cmd)
 {
 	IO0CLR |= (LCD_RS|LCD_RW|LCD_EN|LCD_PINS);
-	IO0PIN |= (cmd<<8);
+	IO0SET |= (cmd<<16);
 	
 	IO0CLR |= LCD_RS;
 	IO0CLR |= LCD_RW;
@@ -46,8 +48,8 @@ void lcd_cmd(unsigned char cmd)
 void lcd_data(unsigned char dat)
 {
 	IO0CLR |= (LCD_RS|LCD_RW|LCD_EN|LCD_PINS);
-	IO0PIN |= (dat<<8);
-	
+	IO0SET |= (dat<<16);
+
 	IO0SET |= LCD_RS;
 	IO0CLR |= LCD_RW;
 	IO0SET |= LCD_EN;
@@ -71,5 +73,5 @@ int main()
 	IO0DIR = 0XFFFFFFFF;
 	lcd_init();
 	lcd_show("Hello ARM-7");
-	
+	delay(5000);
 }
