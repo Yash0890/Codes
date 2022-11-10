@@ -1,0 +1,146 @@
+C51 COMPILER V9.01   TIMER                                                                 03/22/2022 15:26:28 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE TIMER
+OBJECT MODULE PLACED IN timer.OBJ
+COMPILER INVOKED BY: C:\keli\C51\BIN\C51.EXE timer.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include<lcd.h>
+   3          
+   4          // Increment Switch & Led
+   5          sbit inc_sw = P1^0;
+   6          sbit inc_led = P1^4;
+   7          
+   8          // Decrement Switch & Led
+   9          sbit dec_sw = P1^1; 
+  10          sbit dec_led = P1^5;
+  11          
+  12          // Start Switch & Led
+  13          sbit start_sw = P1^2;
+  14          sbit start_led= P1^6;
+  15          
+  16          
+  17          void main()
+  18          {
+  19   1      /*      m_o = old mint
+  20   1              s_o = old second
+  21   1              s = second
+  22   1              m = mint
+  23   1      */
+  24   1              
+  25   1              unsigned int m_o,s_o,m=1,s=10;
+  26   1      
+  27   1              // lcd start function
+  28   1              lcd_start();
+  29   1      
+  30   1              while(1)
+  31   1              {
+  32   2                      // 1st line 1st position
+  33   2                      lcd_cmd(0x80);
+  34   2                      delay(2);
+  35   2                      lcd_string("Timer");
+  36   2      
+  37   2                      // 2nd line 1st position
+  38   2                      lcd_cmd(0xC0);
+  39   2                      delay(2);
+  40   2                      lcd_val(m);
+  41   2      
+  42   2                      lcd_string(":");
+  43   2      
+  44   2                      lcd_val(s);
+  45   2      
+  46   2                      if(inc_sw==0)
+  47   2                      {
+  48   3                              inc_led=1;
+  49   3                              s=s+10;
+  50   3                              if(s>60)
+  51   3                              {
+  52   4                                      m++;
+  53   4                                      s=10;   
+  54   4                              }
+  55   3                              delay(500);
+C51 COMPILER V9.01   TIMER                                                                 03/22/2022 15:26:28 PAGE 2   
+
+  56   3                      }
+  57   2                      else
+  58   2                      {
+  59   3                              inc_led=0;
+  60   3                      }
+  61   2      
+  62   2                      if(dec_sw==0)
+  63   2                      {
+  64   3                              dec_led=1;
+  65   3                              s=s-10;
+  66   3                              if(s<1)
+  67   3                              {
+  68   4                                      m--;
+  69   4                                      s=60;
+  70   4                                      lcd_cmd(0x01);
+  71   4                              }
+  72   3                              delay(500);
+  73   3                      }
+  74   2                      else
+  75   2                      {
+  76   3                              dec_led=0;
+  77   3                      }
+  78   2      
+  79   2                      if(start_sw==0)
+  80   2                      {
+  81   3                              s_o=s;
+  82   3                              m_o=m;
+  83   3      
+  84   3                              while(s!=0)
+  85   3                              {
+  86   4                                      start_led=1;
+  87   4      
+  88   4                                      lcd_cmd(0x80);
+  89   4                                      delay(2);
+  90   4      
+  91   4                                      lcd_string("Timer Started");
+  92   4      
+  93   4                                      lcd_cmd(0xC0);
+  94   4                                      delay(2);
+  95   4                                      lcd_val(m);
+  96   4      
+  97   4                                      lcd_string(":");
+  98   4      
+  99   4                                      lcd_val(s);
+ 100   4      
+ 101   4                                      delay(990);
+ 102   4      
+ 103   4                                      s--;
+ 104   4      
+ 105   4                                      if(m>=1&&s<=0)
+ 106   4                                      {
+ 107   5                                              m--;
+ 108   5                                              s=60;
+ 109   5                                      }
+ 110   4      
+ 111   4                                      lcd_cmd(0x01);          
+ 112   4                              }
+ 113   3                              m=m_o;
+ 114   3                              s=s_o;
+ 115   3                              delay(2);                       
+ 116   3                      }
+ 117   2                      start_led=0;    
+C51 COMPILER V9.01   TIMER                                                                 03/22/2022 15:26:28 PAGE 3   
+
+ 118   2              }
+ 119   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    586    ----
+   CONSTANT SIZE    =     22    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     21      11
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

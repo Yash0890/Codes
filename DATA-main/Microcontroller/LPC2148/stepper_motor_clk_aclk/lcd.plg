@@ -1,0 +1,185 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\ESD\stepper_motor_clk_aclk\lcd.uvproj
+Project File Date:  11/01/2022
+
+<h2>Output:</h2>
+compiling lcd.c...
+lcd.c(65): error:  #268: declaration may not appear after executable statement in block
+lcd.c(72): warning:  #1-D: last line of file ends without a newline
+lcd.c(63): warning:  #550-D: variable "j" was set but never used
+lcd.c(65): warning:  #177-D: variable "val_j" was declared but never referenced
+lcd.c - 1 Error(s), 3 Warning(s).
+compiling lcd.c...
+lcd.c(65): error:  #268: declaration may not appear after executable statement in block
+lcd.c(72): warning:  #1-D: last line of file ends without a newline
+lcd.c(63): warning:  #550-D: variable "j" was set but never used
+lcd.c(65): warning:  #177-D: variable "val_j" was declared but never referenced
+lcd.c - 1 Error(s), 3 Warning(s).
+compiling lcd.c...
+lcd.c(65): error:  #268: declaration may not appear after executable statement in block
+lcd.c(72): warning:  #1-D: last line of file ends without a newline
+lcd.c(63): warning:  #550-D: variable "j" was set but never used
+lcd.c(65): warning:  #177-D: variable "val_j" was declared but never referenced
+lcd.c - 1 Error(s), 3 Warning(s).
+compiling lcd.c...
+lcd.c(65): error:  #268: declaration may not appear after executable statement in block
+lcd.c(72): warning:  #1-D: last line of file ends without a newline
+lcd.c(63): warning:  #550-D: variable "j" was set but never used
+lcd.c(65): warning:  #177-D: variable "val_j" was declared but never referenced
+lcd.c - 1 Error(s), 3 Warning(s).
+compiling lcd.c...
+lcd.c(65): error:  #268: declaration may not appear after executable statement in block
+lcd.c(72): warning:  #1-D: last line of file ends without a newline
+lcd.c(63): warning:  #550-D: variable "j" was set but never used
+lcd.c(65): warning:  #177-D: variable "valj" was declared but never referenced
+lcd.c - 1 Error(s), 3 Warning(s).
+compiling lcd.c...
+lcd.c(65): error:  #268: declaration may not appear after executable statement in block
+lcd.c(66): error:  #65: expected a ";"
+lcd.c(72): warning:  #1-D: last line of file ends without a newline
+lcd.c(63): warning:  #550-D: variable "j" was set but never used
+lcd.c(65): warning:  #177-D: variable "val_j" was declared but never referenced
+lcd.c - 2 Error(s), 3 Warning(s).
+compiling lcd.c...
+lcd.c(65): error:  #268: declaration may not appear after executable statement in block
+lcd.c(72): warning:  #1-D: last line of file ends without a newline
+lcd.c(63): warning:  #550-D: variable "j" was set but never used
+lcd.c(65): warning:  #177-D: variable "val_j" was declared but never referenced
+lcd.c - 1 Error(s), 3 Warning(s).
+compiling lcd.c...
+lcd.c(65): error:  #268: declaration may not appear after executable statement in block
+lcd.c(72): warning:  #1-D: last line of file ends without a newline
+lcd.c(63): warning:  #550-D: variable "j" was set but never used
+lcd.c(65): warning:  #177-D: variable "val_j" was declared but never referenced
+lcd.c - 1 Error(s), 3 Warning(s).
+compiling lcd.c...
+lcd.c(72): warning:  #1-D: last line of file ends without a newline
+lcd.c(63): warning:  #177-D: variable "j" was declared but never referenced
+lcd.c(65): warning:  #177-D: variable "val_j" was declared but never referenced
+lcd.c - 0 Error(s), 3 Warning(s).
+compiling lcd.c...
+lcd.c(65): error:  #268: declaration may not appear after executable statement in block
+lcd.c(72): warning:  #1-D: last line of file ends without a newline
+lcd.c(63): warning:  #550-D: variable "j" was set but never used
+lcd.c(65): warning:  #177-D: variable "val_j" was declared but never referenced
+lcd.c - 1 Error(s), 3 Warning(s).
+compiling lcd.c...
+lcd.c(65): error:  #268: declaration may not appear after executable statement in block
+lcd.c(72): warning:  #1-D: last line of file ends without a newline
+lcd.c(63): warning:  #550-D: variable "j" was set but never used
+lcd.c(65): warning:  #177-D: variable "val_j" was declared but never referenced
+lcd.c - 1 Error(s), 3 Warning(s).
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+lcd.c(15): error:  #20: identifier "unsiged" is undefined
+lcd.c(15): error:  #84: invalid combination of type specifiers
+lcd.c - 2 Error(s), 2 Warning(s).
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+lcd.c - 0 Error(s), 2 Warning(s).
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+lcd.c - 0 Error(s), 2 Warning(s).
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+lcd.c - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+linking...
+lcd.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"lcd.axf" - 1 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+lcd.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"lcd.axf" - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+linking...
+lcd.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"lcd.axf" - 1 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+lcd.c(7): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(8): error:  #169: expected a declaration
+Target not created
+Build target 'Target 1'
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+linking...
+lcd.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"lcd.axf" - 1 Error(s), 2 Warning(s).
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+lcd.c - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+linking...
+lcd.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"lcd.axf" - 1 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+lcd.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"lcd.axf" - 1 Error(s), 0 Warning(s).
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+lcd.c - 0 Error(s), 2 Warning(s).
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+lcd.c - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+linking...
+lcd.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"lcd.axf" - 1 Error(s), 2 Warning(s).
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+lcd.c - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+linking...
+lcd.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"lcd.axf" - 1 Error(s), 2 Warning(s).
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+lcd.c - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+linking...
+lcd.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"lcd.axf" - 1 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+lcd.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"lcd.axf" - 1 Error(s), 0 Warning(s).
+compiling lcd.c...
+lcd.c(3): warning:  #1295-D: Deprecated declaration delay - give arg types
+lcd.c(6): warning:  #1295-D: Deprecated declaration lcdint - give arg types
+lcd.c - 0 Error(s), 2 Warning(s).

@@ -1,0 +1,64 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\ESD\MATRIX\MATRIX.uvproj
+Project File Date:  11/02/2022
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling Startup.s...
+linking...
+MATRIX.axf: Warning: L6665W: Neither Lib$$Request$$armlib Lib$$Request$$cpplib defined, not searching ARM libraries.
+MATRIX.axf: Error: L6411E: No compatible library exists with a definition of startup symbol __main.
+Target not created
+compiling MATRIX.C...
+lcd4bit.h(6): error:  #3: #include file "lcd4bit.h" includes itself
+MATRIX.C - 1 Error(s), 0 Warning(s).
+compiling MATRIX.C...
+lcd4bit.h(6): error:  #3: #include file "lcd4bit.h" includes itself
+MATRIX.C - 1 Error(s), 0 Warning(s).
+compiling MATRIX.C...
+lcd4bit.h(15): warning:  #223-D: function "Delay" declared implicitly
+lcd4bit.h(25): warning:  #223-D: function "Delay" declared implicitly
+lcd4bit.h(40): error:  #25: quoted string should contain at least one character
+lcd4bit.h(44): warning:  #223-D: function "Delay" declared implicitly
+lcd4bit.h(50): warning:  #223-D: function "Delay" declared implicitly
+MATRIX.C(5): error:  #77-D: this declaration has no storage class or type specifier
+MATRIX.C(5): error:  #65: expected a ";"
+MATRIX.C(30): error:  #20: identifier "O1" is undefined
+MATRIX.C(32): warning:  #223-D: function "check" declared implicitly
+MATRIX.C(32): error:  #20: identifier "I1" is undefined
+MATRIX.C(36): error:  #20: identifier "I2" is undefined
+MATRIX.C(40): error:  #20: identifier "I3" is undefined
+MATRIX.C(44): error:  #20: identifier "I4" is undefined
+MATRIX.C(49): error:  #20: identifier "O2" is undefined
+MATRIX.C(68): error:  #20: identifier "O3" is undefined
+MATRIX.C(86): error:  #20: identifier "O4" is undefined
+MATRIX.C(105): error:  #159: declaration is incompatible with previous "check" (declared at line 32)
+MATRIX.C(119): warning:  #1-D: last line of file ends without a newline
+MATRIX.C - 12 Error(s), 6 Warning(s).
+compiling MATRIX.C...
+lcd4bit.h(6): error:  #3: #include file "lcd4bit.h" includes itself
+MATRIX.C - 1 Error(s), 0 Warning(s).
+compiling MATRIX.C...
+lcd4bit.h(15): warning:  #223-D: function "Delay" declared implicitly
+lcd4bit.h(25): warning:  #223-D: function "Delay" declared implicitly
+lcd4bit.h(40): error:  #25: quoted string should contain at least one character
+lcd4bit.h(44): warning:  #223-D: function "Delay" declared implicitly
+lcd4bit.h(50): warning:  #223-D: function "Delay" declared implicitly
+MATRIX.C(5): error:  #77-D: this declaration has no storage class or type specifier
+MATRIX.C(5): error:  #65: expected a ";"
+MATRIX.C(30): error:  #20: identifier "O1" is undefined
+MATRIX.C(32): warning:  #223-D: function "check" declared implicitly
+MATRIX.C(32): error:  #20: identifier "I1" is undefined
+MATRIX.C(36): error:  #20: identifier "I2" is undefined
+MATRIX.C(40): error:  #20: identifier "I3" is undefined
+MATRIX.C(44): error:  #20: identifier "I4" is undefined
+MATRIX.C(49): error:  #20: identifier "O2" is undefined
+MATRIX.C(68): error:  #20: identifier "O3" is undefined
+MATRIX.C(86): error:  #20: identifier "O4" is undefined
+MATRIX.C(105): error:  #159: declaration is incompatible with previous "check" (declared at line 32)
+MATRIX.C(119): warning:  #1-D: last line of file ends without a newline
+MATRIX.C - 12 Error(s), 6 Warning(s).

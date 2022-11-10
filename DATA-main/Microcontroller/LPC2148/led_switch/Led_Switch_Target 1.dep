@@ -1,0 +1,5 @@
+Dependencies for Project 'Led_Switch', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x4F5858F0)(--cpu ARM7TDMI -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips --list "Startup.lst" --xref -o "Startup.o" --depend "Startup.d")
+F (.\Led_Switch.c)(0x635A25CD)(-c --cpu ARM7TDMI -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "led_switch.o" --omf_browse "led_switch.crf" --depend "led_switch.d")
+I (C:\Keil\ARM\Inc\Philips\lpc214x.h)(0x4F585AA4)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0F5AC)

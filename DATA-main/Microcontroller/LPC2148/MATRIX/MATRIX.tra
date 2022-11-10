@@ -1,0 +1,20 @@
+*** Creating Trace Output File 'MATRIX.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"startup.o"'
+### ADS-LD Command completed:
+--cpu ARM7TDMI "startup.o" 
+--strict --scatter "MATRIX.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\MATRIX.map" -o MATRIX.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'MATRIX.axf'
+### ADS-LD Command File: 'MATRIX.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'MATRIX.lnp', Handle=0x00000948
+### Writing '.lnp' file
+### ADS-LD Command file 'MATRIX.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 1 errors
+### Updating obj list
+### LDADS_file() completed.

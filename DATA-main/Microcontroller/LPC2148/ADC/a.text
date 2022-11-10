@@ -1,0 +1,88 @@
+#include<lpc214x.h>
+
+unsigned int adc_value;								//  to store input adc value
+unsigned int adc(int);								// adc function
+
+void lcd_init(void);									// lcd main function
+void lcd_cmd(unsigned char cmd);				// lcd cmd function
+void lcd_data(unsigned char data);				// lcd data function
+void lcd_show(unsigned char *s);			// lcd show function 
+void delay(int i);											// delay function
+
+unsigned int adc(int channel_no)
+{
+	AD0CR = 0x00200600 | (1<<channel_no);
+	AD0CR |= (1<<24);
+	while((AD0GDR & (1<<31))==0);
+	adc_value = AD0GDR;
+	adc_value = (adc_value >> 6) & 0x03FF;
+	return adc_value;
+}
+
+void lcd_init()
+{
+	lcd_cmd(0x38);
+	lcd_cmd(0x0E);
+	lcd_cmd(0x01);
+	lcd_cmd(0x06);
+	lcd_cmd(0x0C);
+	lcd_cmd(0x80);
+}
+
+void lcd_cmd(unsigned char cmd)
+{
+	IO1CLR = 0XFF070000;
+	IO1SET = (cmd<<24);
+	IO1CLR = (1<<16);								//RS = 0
+	IO1CLR = (1<<17);								//RW = 0
+	IO1SET = (1<<18);								//EN = 1
+	delay(100);
+	IO1CLR = (1<<18);								//EN = 0
+}
+
+void lcd_data(unsigned char data)
+{
+	IO1CLR = 0XFF070000;
+	IO1SET = (data << 24);
+	IO1SET = (1<<16);
+	IO1SET = (1<<17);
+	IO1SET = (1<<18);
+	delay(100);
+	IO1CLR = (1<<18);
+}
+
+void show(unsigned char *s)
+{
+	while(*s)
+	{
+		lcd_data(*s++);
+	}
+}
+
+void delay(int i)
+{
+	unsigned int j,k;
+	for(j=0;j<=i;j++)
+	{
+		for(k=0;k<1276;k++);
+	}
+}
+
+int main()
+{
+	IO1DIR = 0xFFFFFFFF;
+	IO0DIR = 0x00000000;
+	PINSEL0 = 0X0300;
+	VPBDIV = 0X02;
+	lcd_init();
+	lcd_show("ADC VALUE");
+	while(1)
+	{
+		lcd_cmd(0x8b);
+		adc_value=adc(6);
+		lcd_data((adc_value/1000)+48);
+		lcd_data((adc_value/100)%10+48);
+		lcd_data((adc_value/10)%10+48);
+		lcd_data((adc_value%10)+48);
+	}
+}

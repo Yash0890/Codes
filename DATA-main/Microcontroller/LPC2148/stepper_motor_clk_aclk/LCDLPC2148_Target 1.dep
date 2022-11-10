@@ -1,0 +1,4 @@
+Dependencies for Project 'LCDLPC2148', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x4F5858F0)(--cpu ARM7TDMI -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips --list "Startup.lst" --xref -o "Startup.o" --depend "Startup.d")
+F (.\LCDLPC2148.c)(0x6360C99D)(-c --cpu ARM7TDMI -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "lcdlpc2148.o" --omf_browse "lcdlpc2148.crf" --depend "lcdlpc2148.d")
+I (C:\Keil\ARM\Inc\Philips\lpc214x.h)(0x4F585AA4)

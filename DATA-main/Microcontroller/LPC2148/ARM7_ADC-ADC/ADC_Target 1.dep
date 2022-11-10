@@ -1,0 +1,13 @@
+Dependencies for Project 'ADC', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x559CEFD8)(--cpu ARM7TDMI -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips --list ".\Listings\Startup.lst" --xref -o ".\Objects\Startup.o" --depend ".\Objects\Startup.d")
+F (.\ADC.c)(0x59D62404)(-c --cpu ARM7TDMI -g -O0 --apcs=interwork --split_sections -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o ".\Objects\adc.o" --omf_browse ".\Objects\adc.crf" --depend ".\Objects\adc.d")
+I (C:\Keil\ARM\Inc\Philips\lpc214x.h)(0x4F585AA4)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0F5AC)
+I (LCD-16x2-8bit.h)(0x59830B55)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdio.h)(0x4EB0F5AE)
+I (C:\Keil\ARM\ARMCC\bin\..\include\string.h)(0x4EB0F5AE)
+F (.\LCD-16x2-8bit.c)(0x59830D86)(-c --cpu ARM7TDMI -g -O0 --apcs=interwork --split_sections -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o ".\Objects\lcd-16x2-8bit.o" --omf_browse ".\Objects\lcd-16x2-8bit.crf" --depend ".\Objects\lcd-16x2-8bit.d")
+I (LCD-16x2-8bit.h)(0x59830B55)
+I (C:\Keil\ARM\Inc\Philips\lpc214x.h)(0x4F585AA4)
+I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0F5AC)
+F (.\LCD-16x2-8bit.h)(0x59830B55)()

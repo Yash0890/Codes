@@ -1,0 +1,5 @@
+--cpu ARM7TDMI "startup.o" 
+--strict --scatter "MATRIX.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\MATRIX.map" -o MATRIX.axf
