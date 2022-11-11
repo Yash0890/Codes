@@ -1,9 +1,9 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
 <html><head>
-<title>Static Call Graph - [D:\Codes\Codes\Microcontroller\LPC2148\lcd\lcd.axf]</title></head>
+<title>Static Call Graph - [H:\lcd_arm7\lcd\lcd\lcd.axf]</title></head>
 <body><HR>
-<H1>Static Call Graph for image D:\Codes\Codes\Microcontroller\LPC2148\lcd\lcd.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.02 [Build 28]: Last Updated: Thu Nov 10 11:52:07 2022
+<H1>Static Call Graph for image H:\lcd_arm7\lcd\lcd\lcd.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.02 [Build 28]: Last Updated: Fri Nov 11 15:41:12 2022
 <BR><P>
 <H3>Maximum Stack Usage =         20 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -44,7 +44,7 @@ Function Pointers
  <LI><a href="#[4]">SWI_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
  <LI><a href="#[3]">Undef_Handler</a> from startup.o(RESET) referenced from startup.o(RESET)
  <LI><a href="#[b]">__main</a> from __main.o(!!!main) referenced from startup.o(RESET)
- <LI><a href="#[a]">main</a> from lcd.o(.text) referenced from rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+ <LI><a href="#[a]">main</a> from lcd_4bit.o(.text) referenced from rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
 </UL>
 <P>
 <H3>
@@ -174,14 +174,14 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[1a]"></a>delay</STRONG> (ARM, 48 bytes, Stack size 0 bytes, lcd.o(.text))
+<P><STRONG><a name="[1a]"></a>delay</STRONG> (ARM, 48 bytes, Stack size 0 bytes, lcd_4bit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_data
 <LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_cmd
 </UL>
 
-<P><STRONG><a name="[19]"></a>lcd_cmd</STRONG> (ARM, 140 bytes, Stack size 8 bytes, lcd.o(.text))
+<P><STRONG><a name="[19]"></a>lcd_cmd</STRONG> (ARM, 284 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = lcd_cmd
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
@@ -189,7 +189,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
 </UL>
 
-<P><STRONG><a name="[1b]"></a>lcd_init</STRONG> (ARM, 60 bytes, Stack size 4 bytes, lcd.o(.text))
+<P><STRONG><a name="[1b]"></a>lcd_init</STRONG> (ARM, 60 bytes, Stack size 4 bytes, lcd_4bit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = lcd_init &rArr; lcd_cmd
 </UL>
 <BR>[Calls]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_cmd
@@ -198,7 +198,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[1c]"></a>lcd_data</STRONG> (ARM, 140 bytes, Stack size 8 bytes, lcd.o(.text))
+<P><STRONG><a name="[1c]"></a>lcd_data</STRONG> (ARM, 284 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = lcd_data
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
@@ -206,7 +206,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_show
 </UL>
 
-<P><STRONG><a name="[1d]"></a>lcd_show</STRONG> (ARM, 44 bytes, Stack size 8 bytes, lcd.o(.text))
+<P><STRONG><a name="[1d]"></a>lcd_show</STRONG> (ARM, 44 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = lcd_show &rArr; lcd_data
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_data
@@ -214,7 +214,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a]"></a>main</STRONG> (ARM, 48 bytes, Stack size 4 bytes, lcd.o(.text))
+<P><STRONG><a name="[a]"></a>main</STRONG> (ARM, 48 bytes, Stack size 4 bytes, lcd_4bit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = main &rArr; lcd_show &rArr; lcd_data
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_show
