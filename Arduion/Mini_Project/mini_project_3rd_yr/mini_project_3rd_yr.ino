@@ -19,7 +19,7 @@
 
 #define DEBOUNCE_TIME 250
 
-#define buzzer_pin 0 //D3
+#define buzzer_pin 16 //D0
 
 #define RELAYPIN_1 5
 #define RELAYPIN_2 4
@@ -152,13 +152,13 @@ void setupWifi(){
   {
     
     Serial.println("Succesfully Connected!!!");
-    
+    digitalWrite(buzzer_pin,LOW);
     return;
   }
   else
   {
     Serial.println("Turning the HotSpot On");
-    
+    digitalWrite(buzzer_pin,HIGH);
     launchWeb();
     setupAP();// Setup HotSpot
   }
@@ -179,7 +179,7 @@ bool testWifi(void)
   int c = 0;
   Serial.println("Waiting for Wifi to connect");
   while ( c < 20 ) {
-    digitalWrite(LED_BUILTIN,LOW);
+    //digitalWrite(LED_BUILTIN,LOW);
     if (WiFi.status() == WL_CONNECTED)
     {
       return true;
@@ -187,7 +187,7 @@ bool testWifi(void)
     delay(500);
     Serial.print("*");
     c++;
-    digitalWrite(LED_BUILTIN,HIGH);
+    //digitalWrite(LED_BUILTIN,HIGH);
   }
   Serial.println("");
   Serial.println("Connect timed out, opening AP");
@@ -199,7 +199,11 @@ void launchWeb()
   
   Serial.println("");
   if (WiFi.status() == WL_CONNECTED)
+  {
     Serial.println("WiFi connected");
+    digitalWrite(buzzer_pin,LOW);
+    delay(5);
+  }
   Serial.print("Local IP: ");
   Serial.println(WiFi.localIP());
   Serial.print("SoftAP IP: ");
@@ -230,7 +234,6 @@ void createWebServer()
 {
   digitalWrite(buzzer_pin,HIGH);
   delay(100);
-  digitalWrite(buzzer_pin,LOW);
  {
     server.on("/", []() {
       IPAddress ip = WiFi.softAPIP();
@@ -308,9 +311,3 @@ void loop() {
   SinricPro.handle();
   handleFlipSwitches();
 }
-
-
-
-
-
-
