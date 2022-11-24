@@ -1,0 +1,39 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,CODE,READONLY
+    2 00000000         START
+    3 00000000 E3A00101        LDR              R0,=0X40000000
+    4 00000004 E3A01115        LDR              R1,=0X40000005
+    5 00000008 E0811000        ADD              R1,R1,R0
+    6 0000000C                 END
+Command Line: --debug --xref --apcs=interwork --depend=add.d -oadd.o -IC:\Keil\
+ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --list=add.l
+st add.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file add.asm
+   Uses
+      None
+Comment: RESET unused
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 2 in file add.asm
+   Uses
+      None
+Comment: START unused
+2 symbols
+332 symbols in table

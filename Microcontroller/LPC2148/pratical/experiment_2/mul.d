@@ -1,0 +1,1 @@
+mul.o: mul.asm

@@ -1,0 +1,5 @@
+--cpu ARM7TDMI "div.o" 
+--strict --scatter "expt_2.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\expt_2.map" -o expt_2.axf

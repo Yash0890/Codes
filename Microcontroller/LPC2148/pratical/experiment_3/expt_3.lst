@@ -1,0 +1,66 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,CODE,READONLY
+    2 00000000         START
+    3 00000000 E3A00101        LDR              R0,=0X40000000
+    4 00000004 E59F1018        LDR              R1,=0X40000050
+    5 00000008 E3A0200A        MOV              R2,#0X0A
+    6 0000000C         LOOP
+    7 0000000C E4903004        LDR              R3,[R0],#04
+    8 00000010 E4813004        STR              R3,[R1],#04
+    9 00000014 E2422001        SUB              R2,R2,#01
+   10 00000018 E3520000        CMP              R2,#00
+   11 0000001C 1AFFFFFA        BNE              LOOP
+   12 00000020         
+   13 00000020 EAFFFFFE 
+                       STOP    B                STOP
+   14 00000024         
+   15 00000024                 END
+              40000050 
+Command Line: --debug --xref --apcs=interwork --depend=expt_3.d -oexpt_3.o -IC:
+\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --list
+=expt_3.lst expt_3.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 6 in file expt_3.asm
+   Uses
+      At line 11 in file expt_3.asm
+Comment: LOOP used once
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file expt_3.asm
+   Uses
+      None
+Comment: RESET unused
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 2 in file expt_3.asm
+   Uses
+      None
+Comment: START unused
+STOP 00000020
+
+Symbol: STOP
+   Definitions
+      At line 13 in file expt_3.asm
+   Uses
+      At line 13 in file expt_3.asm
+Comment: STOP used once
+4 symbols
+336 symbols in table
