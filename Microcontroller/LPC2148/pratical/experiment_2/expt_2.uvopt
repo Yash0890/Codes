@@ -155,7 +155,7 @@
         <Mm>
           <WinNumber>3</WinNumber>
           <SubType>0</SubType>
-          <ItemText>0X40000000</ItemText>
+          <ItemText>0X4400</ItemText>
         </Mm>
       </MemoryWindow3>
       <DebugFlag>
@@ -204,13 +204,13 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>7</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>14</CurrentLine>
+      <CurrentLine>5</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\div.asm</PathWithFileName>
-      <FilenameWithoutPath>div.asm</FilenameWithoutPath>
+      <PathWithFileName>.\mul.asm</PathWithFileName>
+      <FilenameWithoutPath>mul.asm</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

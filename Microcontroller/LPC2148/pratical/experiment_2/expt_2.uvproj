@@ -392,9 +392,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>div.asm</FileName>
+              <FileName>mul.asm</FileName>
               <FileType>2</FileType>
-              <FilePath>.\div.asm</FilePath>
+              <FilePath>.\mul.asm</FilePath>
             </File>
           </Files>
         </Group>

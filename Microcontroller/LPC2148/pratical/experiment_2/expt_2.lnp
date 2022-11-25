@@ -1,4 +1,4 @@
---cpu ARM7TDMI "div.o" 
+--cpu ARM7TDMI "mul.o" 
 --strict --scatter "expt_2.sct" 
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
