@@ -1,0 +1,2 @@
+Dependencies for Project 'expt_6', Target 'Target 1': (DO NOT MODIFY !)
+F (.\expt_6.asm)(0x6383B36B)(--cpu ARM7TDMI -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips --list "expt_6.lst" --xref -o "expt_6.o" --depend "expt_6.d")

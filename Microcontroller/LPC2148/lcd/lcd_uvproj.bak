@@ -397,9 +397,9 @@
               <FilePath>.\Startup.s</FilePath>
             </File>
             <File>
-              <FileName>lcd.c</FileName>
+              <FileName>lcd_4bit.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\lcd.c</FilePath>
+              <FilePath>.\lcd_4bit.c</FilePath>
             </File>
           </Files>
         </Group>

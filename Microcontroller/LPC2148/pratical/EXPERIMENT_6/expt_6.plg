@@ -1,0 +1,23 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+F:\Codes\Codes\Codes\Microcontroller\LPC2148\pratical\EXPERIMENT_6\expt_6.uvproj
+Project File Date:  11/27/2022
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling expt_6.asm...
+linking...
+expt_6.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+expt_6.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=40 RO-data=0 RW-data=0 ZI-data=0  
+"expt_6.axf" - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+assembling expt_6.asm...
+linking...
+expt_6.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
+expt_6.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=40 RO-data=0 RW-data=0 ZI-data=0  
+"expt_6.axf" - 0 Error(s), 2 Warning(s).

@@ -1,1 +1,2 @@
 Dependencies for Project 'EXPT_4', Target 'Target 1': (DO NOT MODIFY !)
+F (.\EXPT_4.asm)(0x638391C9)(--cpu ARM7TDMI -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips --list "EXPT_4.lst" --xref -o "EXPT_4.o" --depend "EXPT_4.d")

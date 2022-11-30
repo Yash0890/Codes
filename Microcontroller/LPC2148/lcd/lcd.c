@@ -1,77 +1,66 @@
 #include <lpc21xx.h>
 
-#define LCD_PINS (0xff<<16)
-#define LCD_RS (1<<13)
-#define LCD_RW (1<<14)
-#define LCD_EN (1<<15)
-
-void delay (unsigned int delay)
-{
-	unsigned int i,j;
-	for(i=0;i<=delay;i++)
-	{
-		for(j=0;j<=1275;j++);
-	}
-}
-
 void lcd_init(void);
-void lcd_show(char *s);
 void lcd_cmd(unsigned char cmd);
-void lcd_data(unsigned char dat);
+void lcd_data(unsigned char data);
+void lcd_show(unsigned char *s);
+void delay(int);
 
-void lcd_init(void)
+void lcd_init()
 {
-	delay(5);
-	lcd_cmd(0x38); // 2 lines 
-	lcd_cmd(0x0e); // display on cursor blinking
-	
-	lcd_cmd(0x01); // clear display
-	lcd_cmd(0x06); // shift to right
-	
-	lcd_cmd(0x80); // force cursor to start form beginning of 1st line
-}	
+	lcd_cmd(0x38);
+	lcd_cmd(0x0e);
+	lcd_cmd(0x01);
+	lcd_cmd(0x06);
+	lcd_cmd(0x0c);
+	lcd_cmd(0x80);
+}
 
 void lcd_cmd(unsigned char cmd)
 {
-	IO0CLR |= (LCD_RS|LCD_RW|LCD_EN|LCD_PINS);
-	IO0SET |= (cmd<<16);
-	
-	IO0CLR |= LCD_RS;
-	IO0CLR |= LCD_RW;
-	IO0SET |= LCD_EN;
-	
-	delay(2);
-	IO0CLR |= LCD_EN;
-	delay(3);
+	IO1CLR=0xFF070000;
+	IO1SET=(cmd<<24);
+	IO1CLR=(1<<16);				//rs=0
+	IO1CLR=(1<<17);				//rw=0
+	IO1SET=(1<<18);			  	//en=1
+	delay(5);
+	IO1CLR=(1<<18);			   	//en=0
 }
 
-void lcd_data(unsigned char dat)
+void lcd_data(unsigned char data)
 {
-	IO0CLR |= (LCD_RS|LCD_RW|LCD_EN|LCD_PINS);
-	IO0SET |= (dat<<16);
-
-	IO0SET |= LCD_RS;
-	IO0CLR |= LCD_RW;
-	IO0SET |= LCD_EN;
-	
+	IO1CLR=0xFF070000;
+	IO1SET=(data<<24);
+	IO1SET=(1<<16);				//rs=1
+	IO1CLR=(1<<17);				//rw=0
+	IO1SET=(1<<18);			   	//en=1
 	delay(2);
-	IO0CLR |= LCD_EN;
-	delay(3);
+	IO1CLR=(1<<18);			   	//en=0
 }
 
-void lcd_show(char *s)
+void lcd_show(unsigned char *s)
 {
-	while(*s!='\0')
+	while(*s) {
+		lcd_data(*s++);
+	}
+}
+
+void delay(int i)
+{
+	unsigned int j,k;
+	for(j=0;j<=i;j++)
 	{
-		lcd_data(*s);
-		s++;
+		for(k=0;k<=1275;k++);
 	}
 }
 
 int main()
 {
-	IO0DIR = 0XFFFFFFFF;
+	IO1DIR = 0xFFFFFFFF;
+	IO0DIR = 0x00000000;
+	PINSEL0 = 0X0300;
+	VPBDIV = 0X02;
 	lcd_init();
-	lcd_show("Hello ARM-7");
-	delay(5000);
+	lcd_show("ADC VALUE");
+	while(1);
 }

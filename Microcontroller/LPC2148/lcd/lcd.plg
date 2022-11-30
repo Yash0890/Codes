@@ -3,30 +3,7 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-H:\lcd_arm7\lcd\lcd\lcd.uvproj
-Project File Date:  11/10/2022
+F:\Codes\Codes\Codes\Microcontroller\LPC2148\lcd\lcd.uvproj
+Project File Date:  11/27/2022
 
 <h2>Output:</h2>
-compiling lcd_4bit.c...
-lcd_4bit.c(40): error:  #20: identifier "F0" is undefined
-lcd_4bit.c(51): error:  #18: expected a ")"
-lcd_4bit.c(68): error:  #20: identifier "F0" is undefined
-lcd_4bit.c(79): error:  #18: expected a ")"
-lcd_4bit.c(105): warning:  #1-D: last line of file ends without a newline
-lcd_4bit.c - 4 Error(s), 1 Warning(s).
-compiling lcd_4bit.c...
-lcd_4bit.c(40): error:  #20: identifier "F0" is undefined
-lcd_4bit.c(79): error:  #18: expected a ")"
-lcd_4bit.c(105): warning:  #1-D: last line of file ends without a newline
-lcd_4bit.c - 2 Error(s), 1 Warning(s).
-compiling lcd_4bit.c...
-lcd_4bit.c(105): warning:  #1-D: last line of file ends without a newline
-lcd_4bit.c - 0 Error(s), 1 Warning(s).
-Rebuild target 'Target 1'
-assembling Startup.s...
-compiling lcd_4bit.c...
-lcd_4bit.c(105): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=1476 RO-data=16 RW-data=0 ZI-data=1256  
-FromELF: creating hex file...
-"lcd.axf" - 0 Error(s), 1 Warning(s).

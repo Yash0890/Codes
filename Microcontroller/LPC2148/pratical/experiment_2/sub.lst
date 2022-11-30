@@ -1,0 +1,74 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,CODE,READONLY
+    2 00000000         START
+    3 00000000 E3A00042        MOV              R0,#0X42
+    4 00000004 E3A01000        MOV              R1,#0X00
+    5 00000008 E3A07008        MOV              R7,#0X08
+    6 0000000C         LOOP
+    7 0000000C E1B000E0        RORS             R0,#0X01
+    8 00000010 3A000000        BCC              SKIP
+    9 00000014 E2811001        ADD              R1,R1,#0X01
+   10 00000018         
+   11 00000018         SKIP
+   12 00000018 E2477001        SUB              R7,R7,#0X01
+   13 0000001C E3570000        CMP              R7,#0X00
+   14 00000020 1AFFFFF9        BNE              LOOP
+   15 00000024 EAFFFFFE 
+                       WAIT    B                WAIT
+   16 00000028                 END
+Command Line: --debug --xref --apcs=interwork --depend=sub.d -osub.o -IC:\Keil\
+ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --list=sub.l
+st sub.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 6 in file sub.asm
+   Uses
+      At line 14 in file sub.asm
+Comment: LOOP used once
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file sub.asm
+   Uses
+      None
+Comment: RESET unused
+SKIP 00000018
+
+Symbol: SKIP
+   Definitions
+      At line 11 in file sub.asm
+   Uses
+      At line 8 in file sub.asm
+Comment: SKIP used once
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 2 in file sub.asm
+   Uses
+      None
+Comment: START unused
+WAIT 00000024
+
+Symbol: WAIT
+   Definitions
+      At line 15 in file sub.asm
+   Uses
+      At line 15 in file sub.asm
+Comment: WAIT used once
+5 symbols
+335 symbols in table

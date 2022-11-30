@@ -12,12 +12,5 @@ assembling expt_3.asm...
 linking...
 expt_3.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
 expt_3.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=36 RO-data=0 RW-data=0 ZI-data=0  
-"expt_3.axf" - 0 Error(s), 2 Warning(s).
-Rebuild target 'Target 1'
-assembling expt_3.asm...
-linking...
-expt_3.axf: Warning: L6305W: Image does not have an entry point. (Not specified or not set due to multiple choices.)
-expt_3.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=40 RO-data=0 RW-data=0 ZI-data=0  
+Program Size: Code=52 RO-data=0 RW-data=0 ZI-data=0  
 "expt_3.axf" - 0 Error(s), 2 Warning(s).

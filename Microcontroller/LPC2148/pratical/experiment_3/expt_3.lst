@@ -4,23 +4,31 @@
 ARM Macro Assembler    Page 1 
 
 
-    1 00000000                 AREA             RESET,CODE,READONLY
-    2 00000000         START
-    3 00000000 E3A00101        LDR              R0,=0X40000000
-    4 00000004 E59F1018        LDR              R1,=0X40000050
-    5 00000008 E3A0200A        MOV              R2,#0X0A
-    6 0000000C         LOOP
-    7 0000000C E4903004        LDR              R3,[R0],#04
-    8 00000010 E4813004        STR              R3,[R1],#04
-    9 00000014 E2422001        SUB              R2,R2,#01
-   10 00000018 E3520000        CMP              R2,#00
-   11 0000001C 1AFFFFFA        BNE              LOOP
-   12 00000020         
-   13 00000020 EAFFFFFE 
-                       STOP    B                STOP
-   14 00000024         
-   15 00000024                 END
-              40000050 
+    1 00000000         ; ZEROS AND ONES
+    2 00000000                 AREA             RESET,CODE,READONLY
+    3 00000000         START
+    4 00000000 E3A00042        MOV              R0,#0X42    ; VALUE
+    5 00000004 E3A01000        MOV              R1,#0X00    ; ONES COUNTER
+    6 00000008 E3A02000        MOV              R2,#0X00    ; ZEROS COUNTER
+    7 0000000C E3A07008        MOV              R7,#0X08    ; LOOP COUNTER
+    8 00000010         
+    9 00000010         LOOP
+   10 00000010 E1B000E0        RORS             R0,#0X01
+   11 00000014 3A000001        BCC              ZERO
+   12 00000018 E2811001        ADD              R1,R1,#0X01
+   13 0000001C EA000000        B                SKIP
+   14 00000020         
+   15 00000020         ZERO
+   16 00000020 E2822001        ADD              R2,R2,#0X01
+   17 00000024         
+   18 00000024         SKIP
+   19 00000024 E2477001        SUB              R7,R7,#0X01
+   20 00000028 E3570000        CMP              R7,#0X00
+   21 0000002C 1AFFFFF7        BNE              LOOP
+   22 00000030         
+   23 00000030 EAFFFFFE 
+                       WAIT    B                WAIT
+   24 00000034                 END
 Command Line: --debug --xref --apcs=interwork --depend=expt_3.d -oexpt_3.o -IC:
 \Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --list
 =expt_3.lst expt_3.asm
@@ -30,37 +38,53 @@ Command Line: --debug --xref --apcs=interwork --depend=expt_3.d -oexpt_3.o -IC:
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Relocatable symbols
 
-LOOP 0000000C
+LOOP 00000010
 
 Symbol: LOOP
    Definitions
-      At line 6 in file expt_3.asm
+      At line 9 in file expt_3.asm
    Uses
-      At line 11 in file expt_3.asm
+      At line 21 in file expt_3.asm
 Comment: LOOP used once
 RESET 00000000
 
 Symbol: RESET
    Definitions
-      At line 1 in file expt_3.asm
+      At line 2 in file expt_3.asm
    Uses
       None
 Comment: RESET unused
+SKIP 00000024
+
+Symbol: SKIP
+   Definitions
+      At line 18 in file expt_3.asm
+   Uses
+      At line 13 in file expt_3.asm
+Comment: SKIP used once
 START 00000000
 
 Symbol: START
    Definitions
-      At line 2 in file expt_3.asm
+      At line 3 in file expt_3.asm
    Uses
       None
 Comment: START unused
-STOP 00000020
+WAIT 00000030
 
-Symbol: STOP
+Symbol: WAIT
    Definitions
-      At line 13 in file expt_3.asm
+      At line 23 in file expt_3.asm
    Uses
-      At line 13 in file expt_3.asm
-Comment: STOP used once
-4 symbols
+      At line 23 in file expt_3.asm
+Comment: WAIT used once
+ZERO 00000020
+
+Symbol: ZERO
+   Definitions
+      At line 15 in file expt_3.asm
+   Uses
+      At line 11 in file expt_3.asm
+Comment: ZERO used once
+6 symbols
 336 symbols in table

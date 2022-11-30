@@ -1,0 +1,20 @@
+*** Creating Trace Output File 'EXPT_4.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"expt_4.o"'
+### ADS-LD Command completed:
+--cpu ARM7TDMI "expt_4.o" 
+--strict --scatter "EXPT_4.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\EXPT_4.map" -o EXPT_4.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'EXPT_4.axf'
+### ADS-LD Command File: 'EXPT_4.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'EXPT_4.lnp', Handle=0x00000770
+### Writing '.lnp' file
+### ADS-LD Command file 'EXPT_4.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

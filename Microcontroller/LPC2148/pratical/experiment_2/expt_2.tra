@@ -1,9 +1,9 @@
 *** Creating Trace Output File 'expt_2.tra' Ok.
 ### Preparing for ADS-LD.
 ### Creating ADS-LD Command Line
-### List of Objects: adding '"mul.o"'
+### List of Objects: adding '"sub.o"'
 ### ADS-LD Command completed:
---cpu ARM7TDMI "mul.o" 
+--cpu ARM7TDMI "sub.o" 
 --strict --scatter "expt_2.sct" 
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
@@ -11,7 +11,7 @@
 ### ADS-LD Output File: 'expt_2.axf'
 ### ADS-LD Command File: 'expt_2.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'expt_2.lnp', Handle=0x00000998
+### Creating CmdFile 'expt_2.lnp', Handle=0x00000564
 ### Writing '.lnp' file
 ### ADS-LD Command file 'expt_2.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

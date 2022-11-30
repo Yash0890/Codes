@@ -1,0 +1,77 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; Factorial
+    2 00000000                 AREA             RESET,CODE,READONLY
+    3 00000000         START
+    4 00000000 E3A00004        MOV              R0,#0X04
+    5 00000004 E3A01001        MOV              R1,#0X01
+    6 00000008 E3500001        CMP              R0,#0X01
+    7 0000000C 0A000004        BEQ              SKIP
+    8 00000010         
+    9 00000010         LOOP
+   10 00000010 E0010190        MUL              R1,R0,R1
+   11 00000014 E2400001        SUB              R0,R0,#0X01
+   12 00000018 E3500001        CMP              R0,#0X01
+   13 0000001C 1AFFFFFB        BNE              LOOP
+   14 00000020         
+   15 00000020 EAFFFFFE 
+                       STOP    B                STOP
+   16 00000024         
+   17 00000024         SKIP
+   18 00000024 E3A01001        MOV              R1,#0X01
+   19 00000028                 END
+Command Line: --debug --xref --apcs=interwork --depend=EXPT_4.d -oEXPT_4.o -IC:
+\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --list
+=EXPT_4.lst EXPT_4.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 00000010
+
+Symbol: LOOP
+   Definitions
+      At line 9 in file EXPT_4.asm
+   Uses
+      At line 13 in file EXPT_4.asm
+Comment: LOOP used once
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 2 in file EXPT_4.asm
+   Uses
+      None
+Comment: RESET unused
+SKIP 00000024
+
+Symbol: SKIP
+   Definitions
+      At line 17 in file EXPT_4.asm
+   Uses
+      At line 7 in file EXPT_4.asm
+Comment: SKIP used once
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 3 in file EXPT_4.asm
+   Uses
+      None
+Comment: START unused
+STOP 00000020
+
+Symbol: STOP
+   Definitions
+      At line 15 in file EXPT_4.asm
+   Uses
+      At line 15 in file EXPT_4.asm
+Comment: STOP used once
+5 symbols
+335 symbols in table

@@ -1,2 +1,2 @@
 Dependencies for Project 'expt_2', Target 'Target 1': (DO NOT MODIFY !)
-F (.\mul.asm)(0x637F159C)(--cpu ARM7TDMI -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips --list "mul.lst" --xref -o "mul.o" --depend "mul.d")
+F (.\sub.asm)(0x63838DD5)(--cpu ARM7TDMI -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips --list "sub.lst" --xref -o "sub.o" --depend "sub.d")

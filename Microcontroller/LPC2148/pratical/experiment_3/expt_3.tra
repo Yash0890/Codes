@@ -11,7 +11,7 @@
 ### ADS-LD Output File: 'expt_3.axf'
 ### ADS-LD Command File: 'expt_3.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'expt_3.lnp', Handle=0x000010A8
+### Creating CmdFile 'expt_3.lnp', Handle=0x0000052C
 ### Writing '.lnp' file
 ### ADS-LD Command file 'expt_3.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

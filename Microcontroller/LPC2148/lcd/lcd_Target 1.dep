@@ -1,4 +1,4 @@
 Dependencies for Project 'lcd', Target 'Target 1': (DO NOT MODIFY !)
-F (.\Startup.s)(0x636C8C38)(--cpu ARM7TDMI -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips --list "Startup.lst" --xref -o "Startup.o" --depend "Startup.d")
-F (.\lcd_4bit.c)(0x636E1F0C)(-c --cpu ARM7TDMI -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "lcd_4bit.o" --omf_browse "lcd_4bit.crf" --depend "lcd_4bit.d")
+F (.\Startup.s)(0x6375290D)(--cpu ARM7TDMI -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips --list "Startup.lst" --xref -o "Startup.o" --depend "Startup.d")
+F (.\lcd_4bit.c)(0x6375290D)(-c --cpu ARM7TDMI -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "lcd_4bit.o" --omf_browse "lcd_4bit.crf" --depend "lcd_4bit.d")
 I (C:\Keil\ARM\Inc\Philips\lpc21xx.h)(0x4F585AA4)

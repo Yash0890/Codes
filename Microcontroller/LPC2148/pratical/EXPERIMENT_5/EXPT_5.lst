@@ -1,0 +1,81 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; Lagest
+    2 00000000         
+    3 00000000                 AREA             RESET,CODE,READONLY
+    4 00000000         
+    5 00000000         START
+    6 00000000 E3A00101        LDR              R0,=0X40000000
+    7 00000004 E3A07009        MOV              R7,#09
+    8 00000008 E4901004        LDR              R1,[R0],#0X04
+    9 0000000C         
+   10 0000000C         LOOP
+   11 0000000C E4902004        LDR              R2,[R0],#0X04
+   12 00000010 E1510002        CMP              R1,R2
+   13 00000014 8A000000        BHI              SKIP
+   14 00000018 E1A01002        MOV              R1,R2
+   15 0000001C         
+   16 0000001C         SKIP
+   17 0000001C E2477001        SUB              R7,R7,#0X01
+   18 00000020 E3570000        CMP              R7,#0X00
+   19 00000024 1AFFFFF8        BNE              LOOP
+   20 00000028         
+   21 00000028 EAFFFFFE 
+                       STOP    B                STOP
+   22 0000002C         
+   23 0000002C                 END
+Command Line: --debug --xref --apcs=interwork --depend=EXPT_5.d -oEXPT_5.o -IC:
+\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --list
+=EXPT_5.lst EXPT_5.ASM
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 10 in file EXPT_5.ASM
+   Uses
+      At line 19 in file EXPT_5.ASM
+Comment: LOOP used once
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 3 in file EXPT_5.ASM
+   Uses
+      None
+Comment: RESET unused
+SKIP 0000001C
+
+Symbol: SKIP
+   Definitions
+      At line 16 in file EXPT_5.ASM
+   Uses
+      At line 13 in file EXPT_5.ASM
+Comment: SKIP used once
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 5 in file EXPT_5.ASM
+   Uses
+      None
+Comment: START unused
+STOP 00000028
+
+Symbol: STOP
+   Definitions
+      At line 21 in file EXPT_5.ASM
+   Uses
+      At line 21 in file EXPT_5.ASM
+Comment: STOP used once
+5 symbols
+335 symbols in table
