@@ -40,7 +40,7 @@ std::map<String, deviceConfig_t> devices = {
   // deviceid , relaypin,switchpin,activelow_status
   { "636b7d4fb8a7fefbd6368a59", {  5, 14, true } },   //  D1  D5
   { "636b7e13b8a7fefbd6368af3", {  4, 12, true } },   //  D2  D6
-  { "636b7e32b8a7fefbd6368b3b", {  15, 13, true } },  //  D8  D7
+  { "636b7e32b8a7fefbd6368b3b", {  2, 13, true } },  //  D8  D7
 };
 
 typedef struct {      // struct for the std::map below

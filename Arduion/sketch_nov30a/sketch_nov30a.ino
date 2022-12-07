@@ -16,6 +16,16 @@ const int   daylightOffset_sec = 3600;
 #define AOUT_PIN2 39
 #define AOUT_PIN3 34
 
+// Valve Pin
+#define Valve1 35
+#define Valve2 32
+#define Valve3 33
+
+
+String Valve1State = "off";
+String Valve2State = "off";
+String Valve3State = "off";
+
 // Wifi Details 
 const char* ssid = "12345";
 const char* password = "Yash#1291";
@@ -25,6 +35,7 @@ DHT dht(DHTPIN, DHTTYPE);
 
 // Server init
 WiFiServer server(80);
+
 
 void setup() 
 {
@@ -63,7 +74,39 @@ void setup()
 }
 
 void loop() {
+  WiFiClient client = server.available();   // Listen for incoming clients
 
+  
+  }
+
+  /*
+  
+  while(value1 >= limit1)
+  {
+    digitalWrite(Valve1, HIGH);
+  }
+  digitalWrite(Valve1, LOW);
+  
+
+  while(value2 >= limit2)
+  {
+    digitalWrite(Valve2, HIGH);
+  }
+  digitalWrite(Valve2, LOW);
+  
+
+  while(value3 >= limit3)
+  {
+    digitalWrite(Valve3, HIGH);
+  }
+  digitalWrite(Valve3, LOW);
+
+  */
+  
+
+}
+
+void get_dht_moisture_value(){
   delay(2000);
 
   // Read Humidity 
@@ -71,9 +114,6 @@ void loop() {
   
   // Read temperature as Celsius (the default)
   float t = dht.readTemperature();
-  
-  // Read temperature as Fahrenheit (isFahrenheit = true)
-  float f = dht.readTemperature(true);
 
   // Plant 1
   int value1 = analogRead(AOUT_PIN1); 
@@ -98,7 +138,7 @@ void loop() {
   char temp_val[100];
   sprintf(temp_val,"Humidity : %d %\nTemperature : %d °C",h,t);
   Serial.println(temp_val);
-
+  return h,t,value1,value2,value3;
 }
 
 void get_LocalTime(){
@@ -110,3 +150,4 @@ void get_LocalTime(){
   Serial.println(&timeinfo, "%A, %B %d %Y %H:%M:%S");
  Serial.println();
 }
+
