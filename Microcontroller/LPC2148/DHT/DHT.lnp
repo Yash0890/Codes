@@ -1,0 +1,5 @@
+--cpu ARM7TDMI "startup.o" "dht.o" 
+--strict --scatter "DHT.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\DHT.map" -o DHT.axf

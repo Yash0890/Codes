@@ -1,0 +1,79 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+F:\Codes\Codes\Codes\Microcontroller\LPC2148\DHT\DHT.uvproj
+Project File Date:  12/07/2022
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling DHT.c...
+DHT.c(16): warning:  #61-D: integer operation result is out of range
+DHT.c(16): warning:  #68-D: integer conversion resulted in a change of sign
+DHT.c(82): error:  #20: identifier "Val" is undefined
+DHT.c(82): error:  #140: too many arguments in function call
+DHT.c(84): warning:  #1-D: last line of file ends without a newline
+Target not created
+compiling DHT.c...
+DHT.c(16): warning:  #61-D: integer operation result is out of range
+DHT.c(16): warning:  #68-D: integer conversion resulted in a change of sign
+DHT.c(82): error:  #140: too many arguments in function call
+DHT.c(84): warning:  #1-D: last line of file ends without a newline
+DHT.c - 1 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling DHT.c...
+DHT.c(16): warning:  #61-D: integer operation result is out of range
+DHT.c(16): warning:  #68-D: integer conversion resulted in a change of sign
+DHT.c(82): error:  #167: argument of type "unsigned int" is incompatible with parameter of type "unsigned char *"
+DHT.c(84): warning:  #1-D: last line of file ends without a newline
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling DHT.c...
+DHT.c(16): warning:  #61-D: integer operation result is out of range
+DHT.c(16): warning:  #68-D: integer conversion resulted in a change of sign
+DHT.c(82): error:  #167: argument of type "unsigned int" is incompatible with parameter of type "unsigned char *"
+DHT.c(84): warning:  #1-D: last line of file ends without a newline
+Target not created
+compiling DHT.c...
+DHT.c(16): warning:  #61-D: integer operation result is out of range
+DHT.c(16): warning:  #68-D: integer conversion resulted in a change of sign
+DHT.c(92): warning:  #1-D: last line of file ends without a newline
+DHT.c - 0 Error(s), 3 Warning(s).
+compiling DHT.c...
+DHT.c(16): warning:  #61-D: integer operation result is out of range
+DHT.c(16): warning:  #68-D: integer conversion resulted in a change of sign
+DHT.c(100): warning:  #1-D: last line of file ends without a newline
+DHT.c - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling DHT.c...
+DHT.c(16): warning:  #61-D: integer operation result is out of range
+DHT.c(16): warning:  #68-D: integer conversion resulted in a change of sign
+DHT.c(100): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=1996 RO-data=32 RW-data=4 ZI-data=1260  
+"DHT.axf" - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling DHT.c...
+DHT.c(16): warning:  #61-D: integer operation result is out of range
+DHT.c(16): warning:  #68-D: integer conversion resulted in a change of sign
+DHT.c(100): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=1996 RO-data=32 RW-data=4 ZI-data=1260  
+FromELF: creating hex file...
+"DHT.axf" - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling DHT.c...
+DHT.c(16): warning:  #61-D: integer operation result is out of range
+DHT.c(16): warning:  #68-D: integer conversion resulted in a change of sign
+DHT.c(93): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=1844 RO-data=32 RW-data=4 ZI-data=1260  
+FromELF: creating hex file...
+"DHT.axf" - 0 Error(s), 3 Warning(s).
