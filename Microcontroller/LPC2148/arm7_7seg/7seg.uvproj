@@ -392,11 +392,6 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>Startup.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\Startup.s</FilePath>
-            </File>
-            <File>
               <FileName>7seg.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\7seg.c</FilePath>

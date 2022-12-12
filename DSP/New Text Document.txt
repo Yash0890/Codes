@@ -1,0 +1,133 @@
+Expt 2 :
+Unit impulse:
+n :10:1:10
+impulse=[zeros(1,10),1,zeros(1,10)]
+stem(n, impulse)
+Xlable('instance')
+Ylable('values')
+Titel('unit impulse ')
+
+
+Step function
+n :10:1:10
+Step=[zeros(1,10),1,ones(1,10)]
+stem(n, impulse)
+Xlable('instance')
+Ylable('values')
+Titel('unit step ')
+
+
+Ramp function
+n :10:1:10
+Ramp=[zeros(1,10),1:11]
+stem(n, ramp)
+Xlable('instance')
+Ylable('values')
+Titel('unit ramp')
+
+
+
+Exponential
+n :10:1:10
+a=0.8
+X1= a.^n
+Srem(n, x1)
+Xlable('instance')
+Ylable('values')
+Titel('exponential ')
+
+
+Expt 3
+
+Convolution
+X=[1,2,3,1]
+h=[1,2,1,-1]
+y=conv(x,h)
+subplot (3,1,1)
+stem(x)
+Titel input
+Subplot (3,1,2)
+Stem h 
+Title impulse response
+Subplot (,3,1,3)
+stem y
+Title output
+
+Expt 4
+
+Circular Convolution
+X=[1,2,3,1]
+h=[1,2,1,-1]
+y=cconv(x,h,4)
+subplot (3,1,1)
+stem(x)
+Titel input
+Subplot (3,1,2)
+Stem h 
+Title impulse response
+Subplot (,3,1,3)
+stem y
+Title output
+
+
+Expt 5 
+Calculate dft
+
+X= [0 1 2 3];
+Y=fft(x);
+Disp(' dft of n-point' );
+Disp (y);
+K =[0 1 2 3];
+Subplot (2,2,1);
+Stem(k,x)
+Xlable('time,n');
+Ylable('x(n)');
+Titel('impulse response ');
+Subplot (2,2,2);
+Stem(k,abs(y));
+Xlable('frequency,k');
+Ylable('amplitude');
+Titel(' magnetic spectrum ');
+Subplot (2,2,3);
+Stem(k,angle(y));
+Xlable('frequency,k');
+Ylable('phase');
+Titel(' phase spectrum ');
+
+
+Expt 6
+Image histogram
+
+i = imread("<path>'")
+imshow();
+figure;
+imhist(1);
+
+Expt 7
+IIR filter
+
+b = [ 0 1 .1];
+a = [1 .2 16.01];
+fs = 2;
+[bz,az]=billinear(b,a,fs)
+
+Expt 8
+Alies frequency
+
+Clc;
+F0 = input(" Enter frequency ");
+Fs = input(" Enter sampling frequency ");
+K = 1:1:5
+FK = (f0+k*fs)
+
+Expt 9
+FIR 
+
+close all;
+clear all;
+clc;
+N = 20;
+B = fir1(n,0.5,"low",Blackman(n+1), ' noscale')
+X = 0:255;
+X = X*(6.28/255)
+Plot(x , abs(B) )

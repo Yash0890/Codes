@@ -3,7 +3,13 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-D:\Data\E-yantra\Tutorials-master\Microcontrollers\LPC2148\arm7_7seg\7seg.uvproj
-Project File Date:  11/10/2022
+F:\Codes\Codes\Codes\Microcontroller\LPC2148\arm7_7seg\7seg.uvproj
+Project File Date:  12/08/2022
 
 <h2>Output:</h2>
+Rebuild target 'Target 1'
+compiling 7seg.c...
+7seg.c(33): warning:  #1-D: last line of file ends without a newline
+linking...
+7seg.sct(7): error: L6236E: No section matches selector - no section to be FIRST/LAST.
+"7seg.axf" - 1 Error(s), 1 Warning(s).
