@@ -396,6 +396,11 @@
               <FileType>1</FileType>
               <FilePath>.\7seg.c</FilePath>
             </File>
+            <File>
+              <FileName>Startup.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Startup.s</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

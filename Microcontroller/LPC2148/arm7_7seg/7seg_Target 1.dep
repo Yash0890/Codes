@@ -1,3 +1,4 @@
 Dependencies for Project '7seg', Target 'Target 1': (DO NOT MODIFY !)
 F (.\7seg.c)(0x6391B97E)(-c --cpu ARM7TDMI -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "7seg.o" --omf_browse "7seg.crf" --depend "7seg.d")
 I (C:\Keil\ARM\Inc\Philips\lpc21xx.h)(0x4F585AA4)
+F (.\Startup.s)(0x6375290D)(--cpu ARM7TDMI -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips --list "Startup.lst" --xref -o "Startup.o" --depend "Startup.d")
